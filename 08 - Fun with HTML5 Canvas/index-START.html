@@ -6,7 +6,36 @@
 </head>
 <body>
 <canvas id="draw" width="800" height="800"></canvas>
+
+<canvas id="canvas"></canvas>
+
 <script>
+
+var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
+
+ctx.strokeStyle = 'blue';
+ctx.strokeRect(10, 10, 100, 100);
+
+
+const canvas = document.querySelector('#draw');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+ctx.strokeStyle = '#BADA55';
+ctx.lineJoin = 'round';
+ctx.lineCap = 'round';
+ctx.lineWidth = 100;
+// ctx.globalCompositeOperation = 'multiply';
+
+let isDrawing = false;
+let lastX = 0;
+let lastY = 0;
+let hue = 0;
+let direction = true;
+
+
+
 </script>
 
 <style>
